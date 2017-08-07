@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>What's My Name?</title>
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action='/result' method='post'>
+        <label for="first_name">First Name: </label> 
+        <input type='text' name='first_name'>
+        <label for="last_name">Last Name: </label> 
+        <input type='text' name='last_name'>
+        <label for="email">Email: </label> 
+        <input type='text' name='email'>
+        <label for="password">Password: </label> 
+        <input type='password' name='password'>
+        <label for="confirmed">Confirmed Password: </label> 
+        <input type='password' name='confirmed'>
+        <input type='submit' value='submit' class="submit_button">
+      </form>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </div>
+  </body>
+</html>

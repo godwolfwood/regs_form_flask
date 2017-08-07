@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+.wrapper form,
+.info{
+    border: 3px solid black;
+    width: 90%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.wrapper form label,
+.right,
+.left{
+    display: inline-block;
+    width: 45%;
+    margin-top: 10px;
+}
+.wrapper form textarea{
+    display: inline-block;
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+}
+.submit_button{
+    margin-left: 250px
+}
+.back_button{
+    text-align: right;
+    border: 3px solid black;
+    display: inline-block;
+    padding: 2px 5px;
+    box-sizing: border-box;
+}
